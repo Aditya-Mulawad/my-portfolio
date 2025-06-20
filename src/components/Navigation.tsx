@@ -20,7 +20,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-teal-800">
+          <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-orange-500 bg-clip-text text-transparent">
             AM
           </Link>
 
@@ -31,13 +31,13 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "text-gray-700 hover:text-teal-600 transition-colors duration-200 relative",
-                  location.pathname === item.path && "text-teal-600"
+                  "text-gray-700 hover:text-purple-600 transition-colors duration-200 relative",
+                  location.pathname === item.path && "text-purple-600"
                 )}
               >
                 {item.label}
                 {location.pathname === item.path && (
-                  <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-teal-600 rounded-full" />
+                  <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-600 to-orange-500 rounded-full" />
                 )}
               </Link>
             ))}
@@ -79,8 +79,8 @@ const Navigation = () => {
                 key={item.path}
                 to={item.path}
                 className={cn(
-                  "block py-2 text-gray-700 hover:text-teal-600 transition-colors duration-200",
-                  location.pathname === item.path && "text-teal-600"
+                  "block py-2 text-gray-700 hover:text-purple-600 transition-colors duration-200",
+                  location.pathname === item.path && "text-purple-600"
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
