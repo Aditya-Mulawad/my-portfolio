@@ -58,7 +58,7 @@ const Index = () => {
             <div className="relative">
               <div className="w-80 h-80 lg:w-96 lg:h-96 bg-white rounded-full overflow-hidden border-8 border-white shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src="https://i.ibb.co/0RVNDgsT/hero-image.jpg"
                   alt="Aditya Mulawad"
                   className="w-full h-full object-cover"
                 />
