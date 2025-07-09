@@ -70,8 +70,8 @@ const Contact = () => {
     },
     {
       title: "LinkedIn",
-      value: "linkedin.com/in/adityamulawad",
-      link: "https://linkedin.com/in/adityamulawad"
+      value: "Aditya Mulawad",
+      link: "https://www.linkedin.com/in/aditya-mulawad-816326233"
     },
     {
       title: "GitHub",
@@ -209,7 +209,7 @@ const Contact = () => {
                     size="sm"
                     className="border-teal-600 text-teal-600 hover:bg-teal-50"
                   >
-                    <a href="https://linkedin.com/in/adityamulawad" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/aditya-mulawad-816326233" target="_blank" rel="noopener noreferrer">
                       LinkedIn
                     </a>
                   </Button>

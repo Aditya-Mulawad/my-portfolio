@@ -9,37 +9,66 @@ const Portfolio = () => {
       id: 1,
       title: "Booqin",
       category: "Mobile App Design",
-      description: "A modern salon booking app built as part of a UI/UX internship. Focused on user flow, interactive wireframes, and accessibility.",
-      image: "https://png.pngtree.com/background/20230610/original/pngtree-hair-salon-with-black-lighting-and-chandelier-picture-image_3105657.jpg",
+      description:
+        "A modern salon booking app built as part of a UI/UX internship. Focused on user flow, interactive wireframes, and accessibility.",
+      image:
+        "https://png.pngtree.com/background/20230610/original/pngtree-hair-salon-with-black-lighting-and-chandelier-picture-image_3105657.jpg",
       tools: ["Figma", "Prototyping", "User Research"],
-      type: "UI/UX Project"
+      type: "UI/UX Project",
+      detailsLink: "",
+      prototypeLink: "https://www.figma.com/proto/08CixBSVHNhechBIlrm5eh/Booqin?t=8vsLqeFk5sIWah9d-1"
     },
     {
       id: 2,
       title: "QuickCart",
       category: "E-commerce App",
-      description: "A concept project designed to simplify online grocery shopping with clean UI and seamless user experience.",
-      image: "https://www.addevice.io/storage/ckeditor/uploads/images/63d0f032b4ead_guide.to.grocery.delivery.app.development.png",
+      description:
+        "A concept project designed to simplify online grocery shopping with clean UI and seamless user experience.",
+      image:
+        "https://www.addevice.io/storage/ckeditor/uploads/images/63d0f032b4ead_guide.to.grocery.delivery.app.development.png",
       tools: ["Figma", "Accessibility", "Mobile UX"],
-      type: "Case Study"
+      type: "Case Study",
+      detailsLink: "",
+      prototypeLink: "https://www.figma.com/proto/I4TeP8KFABmXCDNUDFBM7C/QuickCart---Assignment?node-id=1-78"
     },
     {
       id: 3,
       title: "EarthLeaf",
       category: "E-commerce Web Design",
-      description: "A Figma-based design concept for an organic tea powder brand. Focused on clean layout, natural color schemes, product hierarchy, and responsive UI components for an optimal shopping experience.",
-      image: "https://s.tmimgcdn.com/scr/800x500/76200/tea-production-tea-shop-multipage-modern-html-website-template_76270-original.jpg",
+      description:
+        "A Figma-based design concept for an organic tea powder brand. Focused on clean layout, natural color schemes, product hierarchy, and responsive UI components for an optimal shopping experience.",
+      image:
+        "https://s.tmimgcdn.com/scr/800x500/76200/tea-production-modele-de-site-web-html-moderne-multipage-de-magasin-de-the_76270-original.jpg",
       tools: ["Figma", "UI Design", "Responsive Layout", "E-commerce UX"],
-      type: "UI/UX Case Study"
+      type: "UI/UX Case Study",
+      detailsLink: "",
+      prototypeLink: "https://www.figma.com/proto/IpKhZUMqXb4OC1UDn0yUpL/EarthLeaf?node-id=2-2&t=9aiiw4SbJ3iIjOEm-1"
     },
     {
       id: 4,
       title: "Personal Portfolio",
       category: "Web Development",
-      description: "My own portfolio built with React & Tailwind CSS. Highlights my design thinking, responsiveness, and interaction design skills.",
+      description:
+        "My own portfolio built with React & Tailwind CSS. Highlights my design thinking, responsiveness, and interaction design skills.",
       image: "https://i.postimg.cc/xT10FFK0/pt.png",
       tools: ["React", "TypeScript", "Tailwind CSS"],
-      type: "Showcase"
+      type: "Showcase",
+      detailsLink: "",
+      prototypeLink: "https://aditya-mulawad.github.io/my-portfolio/"
+    },
+    {
+      id: 5,
+      title: "Kala Dirgha",
+      category: "UI/UX Case Study",
+      description:
+        "A culturally rooted e-commerce platform for antiques and handicrafts. Focused on simplicity, accessibility, and intuitive flow for non-technical users.",
+      image: "https://i.postimg.cc/7h90Dfv4/Screenshot-2025-07-09-205508.png", // Replace with your own image if needed
+      tools: ["Figma", "Wireframing", "Accessibility", "Design System"],
+      type: "UI/UX Project",
+      detailsLink:
+        "https://www.figma.com/proto/AUdiGoFoOi930LLx5tOuEh/Kala-Dirgha-UI-Design?node-id=18-162&t=GAvZeqUmgBYanEvi-1",
+      prototypeLink:
+        "https://www.figma.com/proto/AUdiGoFoOi930LLx5tOuEh/Kala-Dirgha-UI-Design?node-id=18-162&t=GAvZeqUmgBYanEvi-1"
     }
   ];
 
@@ -47,7 +76,6 @@ const Portfolio = () => {
     <Layout>
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">Projects</h1>
@@ -59,7 +87,10 @@ const Portfolio = () => {
           {/* Projects Grid */}
           <div className="grid lg:grid-cols-2 gap-8 mb-20">
             {projects.map((project) => (
-              <Card key={project.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <Card
+                key={project.id}
+                className="overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
                 <div className="relative">
                   <img
                     src={project.image}
@@ -75,13 +106,21 @@ const Portfolio = () => {
                 <CardContent className="p-6">
                   <div className="space-y-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                      <p className="text-teal-600 font-medium mb-3">{project.category}</p>
-                      <p className="text-gray-600 leading-relaxed">{project.description}</p>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-teal-600 font-medium mb-3">
+                        {project.category}
+                      </p>
+                      <p className="text-gray-600 leading-relaxed">
+                        {project.description}
+                      </p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Tools & Skills Used:</h4>
+                      <h4 className="font-semibold text-gray-900 mb-2">
+                        Tools & Skills Used:
+                      </h4>
                       <div className="flex flex-wrap gap-2">
                         {project.tools.map((tool) => (
                           <span
@@ -94,10 +133,32 @@ const Portfolio = () => {
                       </div>
                     </div>
 
-                    <Button variant="outline" className="w-full border-teal-600 text-teal-600 hover:bg-teal-50">
-                      View More Details
-                      <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    <div className="flex flex-col gap-2 sm:flex-row">
+                      <a
+                        href={project.detailsLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full"
+                      >
+                        <Button variant="outline" className="w-full border-teal-600 text-teal-600 hover:bg-teal-50">
+                          View More Details
+                          <ChevronRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                      {project.prototypeLink && (
+                        <a
+                          href={project.prototypeLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full"
+                        >
+                          <Button className="w-full bg-teal-600 text-white hover:bg-teal-700">
+                            View Prototype
+                            <ChevronRight className="ml-2 h-4 w-4" />
+                          </Button>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -106,23 +167,42 @@ const Portfolio = () => {
 
           {/* Design Process Section */}
           <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">My Design Process</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              My Design Process
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-              I believe in a structured and thoughtful process that turns ideas into functional, human-centered products.
+              I believe in a structured and thoughtful process that turns ideas
+              into functional, human-centered products.
             </p>
 
             <div className="grid md:grid-cols-4 gap-8">
               {[
-                { title: "Research", desc: "Understanding user needs, goals, and constraints." },
-                { title: "Ideation", desc: "Sketching, wireframing, and exploring design directions." },
-                { title: "Design", desc: "Crafting polished UIs and building interactive prototypes." },
-                { title: "Test & Iterate", desc: "Collecting feedback and improving the experience." },
+                {
+                  title: "Research",
+                  desc: "Understanding user needs, goals, and constraints."
+                },
+                {
+                  title: "Ideation",
+                  desc: "Sketching, wireframing, and exploring design directions."
+                },
+                {
+                  title: "Design",
+                  desc: "Crafting polished UIs and building interactive prototypes."
+                },
+                {
+                  title: "Test & Iterate",
+                  desc: "Collecting feedback and improving the experience."
+                }
               ].map((step, idx) => (
                 <div key={idx} className="space-y-4">
                   <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto">
-                    <span className="text-white text-lg font-bold">{`0${idx + 1}`}</span>
+                    <span className="text-white text-lg font-bold">{`0${
+                      idx + 1
+                    }`}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900">{step.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {step.title}
+                  </h3>
                   <p className="text-gray-600 text-sm">{step.desc}</p>
                 </div>
               ))}
